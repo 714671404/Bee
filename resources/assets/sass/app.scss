@@ -1,0 +1,9 @@
+@import '~bootstrap/scss/bootstrap';
+
+@import 'elements/transitions';
+@import 'elements/main';
+
+.navbar-laravel {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
