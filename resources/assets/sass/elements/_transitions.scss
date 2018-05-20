@@ -1,3 +1,4 @@
+// 所有页面初始动画
 .page-enter-active,
 .page-leave-active {
   transition: opacity .2s;
@@ -5,4 +6,20 @@
 .page-enter,
 .page-leave-to {
   opacity: 0;
+}
+
+// 首页banner动画
+.banner-home-ul-enter-to {
+  transition: all 1s ease;
+  transform: translateX(0);
+}
+.banner-home-ul-leave-active {
+  transition: all 1s ease;
+  transform: translateX(-100%);
+}
+.banner-home-ul-enter {
+  transform: translateX(100%);
+}
+.banner-home-ul-leave {
+  transform: translateX(0);
 }

@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /*!
  * Bootstrap v4.1.1 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
@@ -10420,6 +10422,92 @@ a.text-dark:focus {
 .page-enter,
 .page-leave-to {
   opacity: 0;
+}
+
+.banner-home-ul-enter-to {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.banner-home-ul-leave-active {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.banner-home-ul-enter {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.banner-home-ul-leave {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+* {
+  font-size: 12px;
+  font-family: "\5FAE\8F6F\96C5\9ED1";
+  font-weight: inherit;
+}
+
+html {
+  /*隐藏滚动条，当IE下溢出，仍然可以滚动*/
+  -ms-overflow-style: none;
+  /*火狐下隐藏滚动条*/
+  overflow: -moz-scrollbars-none;
+}
+
+/*Chrome下隐藏滚动条，溢出可以透明滚动*/
+
+html::-webkit-scrollbar {
+  width: 0px;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+input::-ms-reveal {
+  display: none;
+}
+
+input,
+button {
+  list-style-type: none;
+  border: none;
+  outline: none;
+}
+
+button {
+  background: none;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
 }
 
 .icon-select {

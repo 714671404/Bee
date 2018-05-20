@@ -2,24 +2,27 @@
     <div class="appliction">
         <top-nav/>
 
-        <div class="container">
-            <container/>
+        <div class="content">
+            <router-view/>
         </div>
+
+        <bottom-information/>
+
+        <other/>
     </div>
 </template>
 
 <script>
-    import TopNav from '~/components/TopNav'
-    import Container from '~/components/Container'
     export default {
         name: "default",
-        components: {
-            TopNav,
-            Container
-        }
     }
 </script>
 
 <style scoped>
-
+    .content {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        background-color: #f1f1f1;
+    }
 </style>

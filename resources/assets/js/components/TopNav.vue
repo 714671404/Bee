@@ -6,36 +6,13 @@
             </div>
             <div class="nav">
                 <ul>
-                    <li>
-                        <a href="">首页</a>
-                    </li>
-                    <li>
-                        <a href="">关于</a>
-                    </li>
-                    <li>
-                        <a href="">成长</a>
-                    </li>
-                    <li>
-                        <a href="">学习</a>
-                        <div class="two-nav">
+                    <li v-for="list in topNav">
+                        <a :href="list.href">{{list.name}}</a>
+                        <div class="two-nav" v-if="list.twoNav">
                             <ul class="p-0">
-                                <li><a href="">JavaScript</a></li>
-                                <li><a href="">Python</a></li>
-                                <li><a href="">C++</a></li>
-                                <li><a href="">C</a></li>
-                                <li><a href="">php</a></li>
-                                <li><a href="">html</a></li>
+                                <li v-for="two in list.twoNav"><a :href="two.href">{{two.name}}</a></li>
                             </ul>
                         </div>
-                    </li>
-                    <li>
-                        <a href="">娱乐</a>
-                    </li>
-                    <li>
-                        <a href="">说说</a>
-                    </li>
-                    <li>
-                        <a href="">留言</a>
                     </li>
                 </ul>
             </div>
@@ -53,12 +30,71 @@
     export default {
         name: "top-nav",
         data: () => ({
-            zt: false
+            topNav: [
+                {
+                    href: 'javascript:void(0)',
+                    name: '首页',
+                    twoNav: null
+                },
+                {
+                    href: 'javascript:void(0)',
+                    name: '关于',
+                    twoNav: null
+                },
+                {
+                    href: 'javascript:void(0)',
+                    name: '成长',
+                    twoNav: null
+                },
+                {
+                    href: 'javascript:void(0)',
+                    name: '学习',
+                    twoNav: [
+                        {
+                            href: 'javascript:void(0)',
+                            name: 'JavaScript'
+                        },
+                        {
+                            href: 'javascript:void(0)',
+                            name: 'Python'
+                        },
+                        {
+                            href: 'javascript:void(0)',
+                            name: 'C++'
+                        },
+                        {
+                            href: 'javascript:void(0)',
+                            name: 'C语言'
+                        },
+                        {
+                            href: 'javascript:void(0)',
+                            name: 'PHP'
+                        },
+                        {
+                            href: 'javascript:void(0)',
+                            name: 'HTML'
+                        },
+                    ]
+                },
+                {
+                    href: 'javascript:void(0)',
+                    name: '娱乐',
+                    twoNav: null
+                },
+                {
+                    href: 'javascript:void(0)',
+                    name: '说说',
+                    twoNav: null
+                },
+                {
+                    href: 'javascript:void(0)',
+                    name: '留言',
+                    twoNav: null
+                }
+            ],
         }),
         computed: {
-            hjCss () {
-                this.zt = !this.zt
-            }
+
         },
         methods: {
 

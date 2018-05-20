@@ -1,3 +1,26 @@
+* {
+  font-size: 12px;
+  font-family: "微软雅黑";
+  font-weight: inherit;
+}
+html {
+  /*隐藏滚动条，当IE下溢出，仍然可以滚动*/
+  -ms-overflow-style:none;
+  /*火狐下隐藏滚动条*/
+  overflow:-moz-scrollbars-none;
+}
+/*Chrome下隐藏滚动条，溢出可以透明滚动*/
+html::-webkit-scrollbar{width:0px}
+input::-ms-clear{display: none;}
+input::-ms-reveal{display: none;}
+input,button{list-style-type:none; border: none; outline: none;}
+button{ background: none;}
+li{list-style: none}
+a{text-decoration: none}
+a:link{text-decoration:none; }
+a:visited{text-decoration:none; }
+a:hover{text-decoration:none;}
+a:active{text-decoration:none;}
 .icon-select {
   background: url('/images/searchbtn.png') no-repeat;
   width: 16px;
