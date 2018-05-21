@@ -2,6 +2,11 @@
     <div class="content-right">
         <popular-tags/>
 
+        <referral-article/>
+
+        <top-comments/>
+
+        <personal-information/>
     </div>
 </template>
 
