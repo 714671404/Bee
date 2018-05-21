@@ -2,10 +2,10 @@
     <footer class="footer">
         <div class="footer-inner">
             <ul class="p-0 m-0 bottom-nav-left">
-                <li v-for="list in bottomNavLeft"><a :href="list.href">{{list.name}}</a></li>
+                <li v-for="(list, index) in bottomNavLeft" :key="index"><a :href="list.href">{{list.name}}</a></li>
             </ul>
             <ul class="p-0 m-0 bottom-nav-right">
-                <li v-for="list in bottomNavRight"><a :href="list.href">{{list.name}}</a></li>
+                <li v-for="(list, index) in bottomNavRight" :key="index"><a :href="list.href">{{list.name}}</a></li>
             </ul>
         </div>
     </footer>

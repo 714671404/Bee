@@ -6,7 +6,7 @@
             </div>
             <div class="nav">
                 <ul>
-                    <li v-for="list in topNav">
+                    <li v-for="(list, index) in topNav" :key="index">
                         <a :href="list.href">{{list.name}}</a>
                         <div class="two-nav" v-if="list.twoNav">
                             <ul class="p-0">

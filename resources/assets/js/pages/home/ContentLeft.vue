@@ -1,6 +1,8 @@
 <template>
     <div class="content-left">
         <referrals/>
+
+        <new-release/>
     </div>
 </template>
 

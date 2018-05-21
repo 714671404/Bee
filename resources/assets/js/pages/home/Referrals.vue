@@ -3,9 +3,9 @@
         <h2 class="referrals-title">特别推举</h2>
         <div class="referrals-inner">
             <ul class="p-0 m-0">
-                <li v-for="list in messages">
-                    <a :href="list.href">
-                        <img :src="list.img" :alt="list.title"/>
+                <li v-for="(list, index) in messages" :key="index">
+                    <a :href="list.href" :alt="list.title" :title="list.title">
+                        <img :src="list.img" :alt="list.title" :title="list.title"/>
                         <h3 class="inner-title">{{list.title}}</h3>
                         <p>{{list.content}}</p>
                     </a>
@@ -44,7 +44,7 @@
                 {
                     id: 4,
                     href: 'javascript:void(0)',
-                    img: '/images/linshi/4.jpg',
+                    img: '/images/linshi/3.jpg',
                     title: '【力荐】一个北漂五年的人告诉你，为什么二十多岁的你要努力.满满的正能量',
                     content: '还有人问我，凭什么就说钱是人的胆？ 尊严大于一切!有尊严就有活着的意义!没钱也可以有尊严，你这是悖论，当你的孩子看到一样东西露出渴求的眼神，你问他想不想要，他“乖巧懂事”的回...'
                 },
@@ -68,9 +68,6 @@
 </script>
 
 <style scoped>
-    .referrals {
-        float: left;
-    }
     .referrals-title {
         font-size: 15px;
         font-weight: 400;
@@ -80,9 +77,6 @@
         border-radius: 5px 5px 0 0;
         line-height: 20px;
         background-color: #F7F7F7
-    }
-    .referrals-inner {
-
     }
     .referrals-inner>ul {
         overflow: hidden;
@@ -122,5 +116,11 @@
         height: 56px;
         float: left;
         margin: 8px 0 0 10px;
+        padding-bottom: 2px;
+        overflow: hidden;
+    }
+    .referrals-inner>ul>li>a:hover {
+        color: #4eae30;
+        background-color: #F4FFEF;
     }
 </style>

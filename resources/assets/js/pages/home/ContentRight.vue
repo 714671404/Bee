@@ -1,6 +1,7 @@
 <template>
     <div class="content-right">
-        1
+        <popular-tags/>
+
     </div>
 </template>
 
